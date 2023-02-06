@@ -49,17 +49,19 @@ public class SweetsFragment extends Fragment {
 
     private void setUpRecyclerView (View view) {
 
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut,"dount","40","jsjkdxklkskx"));
+        data.add(new MenuItemData(R.drawable.sweets1,"Chocolate Cake","40"));
+        data.add(new MenuItemData(R.drawable.sweets2, "Molten Cake", "50"));
+        data.add(new MenuItemData(R.drawable.sweets3, "Brownies", "50"));
+        data.add(new MenuItemData(R.drawable.sweets4, "Mousse Cake", "55"));
+        data.add(new MenuItemData(R.drawable.sweets5, "Strawberry Cake", "45"));
+        data.add(new MenuItemData(R.drawable.sweets6, "Red Velvet","45"));
+        data.add(new MenuItemData(R.drawable.sweets7, "Cookies", "35"));
+        data.add(new MenuItemData(R.drawable.sweets8, "Pancake", "50"));
+        data.add(new MenuItemData(R.drawable.sweets9, "Cheesecake","40"));
+        data.add(new MenuItemData(R.drawable.sweets10, "Religieuse","40"));
 
         recyclerView = view.findViewById(R.id.sweetsRecycler);
+        MeniItemAdapter meniItemAdapter = new MeniItemAdapter(data);
         recyclerView.setAdapter(meniItemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 

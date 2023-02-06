@@ -48,15 +48,20 @@ public class ColdDrinksFragment extends Fragment {
 
     private void setUpRecyclerView(View view) {
 
-        data.add(new MenuItemData(R.drawable.alferedo, "Alfredo ", "50"));
-        data.add(new MenuItemData(R.drawable.pasta1, "Tagliolini", "70"));
-        data.add(new MenuItemData(R.drawable.pasta2, "Spaghetii", "60"));
-        data.add(new MenuItemData(R.drawable.pasta3, "Chicken Pasta", "55"));
-        data.add(new MenuItemData(R.drawable.pasta4, "Lasagna Pasta", "60"));
-        data.add(new MenuItemData(R.drawable.pasta5, "Negresco Pasta","60"));
-
+        data.add(new MenuItemData(R.drawable.cold1, "Soft Drinks ", "15"));
+        data.add(new MenuItemData(R.drawable.cold2, "Ice Tea", "40"));
+        data.add(new MenuItemData(R.drawable.cold3, "Ice Mocha", "50"));
+        data.add(new MenuItemData(R.drawable.cold4, "Ice Coffee", "50"));
+        data.add(new MenuItemData(R.drawable.cold5, "Avocado Juice", "45"));
+        data.add(new MenuItemData(R.drawable.cold6, "Lemon","30"));
+        data.add(new MenuItemData(R.drawable.cold7, "Watermelon Juice", "35"));
+        data.add(new MenuItemData(R.drawable.cold8, "Strawbarrey", "35"));
+        data.add(new MenuItemData(R.drawable.cold9, "Orange", "30"));
+        data.add(new MenuItemData(R.drawable.cold10, "Pineapple","40"));
+        data.add(new MenuItemData(R.drawable.cold11, "Smoothie", "45"));
 
         recyclerView = view.findViewById(R.id.coldDrinkRecycler);
+        MeniItemAdapter meniItemAdapter = new MeniItemAdapter(data);
         recyclerView.setAdapter(meniItemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
     }

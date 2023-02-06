@@ -41,21 +41,25 @@ public class PizzaFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        setUpRecyclerView(view);
     }
 
     private void setUpRecyclerView(View view) {
 
-        data.add(new MenuItemData(R.drawable.alferedo, "alferdo", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.alferedo, "alferdo", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.alferedo, "dount", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut, "dount", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut, "dount", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut, "dount", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut, "dount", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut, "dount", "40", "jsjkdxklkskx"));
-        data.add(new MenuItemData(R.drawable.donut, "dount", "40", "jsjkdxklkskx"));
+        data.add(new MenuItemData(R.drawable.pizza1, "Cheese Pizza", "25"));
+        data.add(new MenuItemData(R.drawable.pizza2, "Veggie Pizza", "35"));
+        data.add(new MenuItemData(R.drawable.pizza3, "Pepperoni Pizza", "40"));
+        data.add(new MenuItemData(R.drawable.pizza4, "Meat Pizza", "35"));
+        data.add(new MenuItemData(R.drawable.pizza5, "Margherita Pizza", "30"));
+        data.add(new MenuItemData(R.drawable.pizza6, "Buffalo Pizza","40"));
+        data.add(new MenuItemData(R.drawable.pizza7, "Syperme Pizza", "45"));
+        data.add(new MenuItemData(R.drawable.pizza8, "BBQ Pizza", "45"));
+        data.add(new MenuItemData(R.drawable.pizza9, "Checkin Pizza","50"));
 
-        recyclerView = view.findViewById(R.id.pastaRecycler);
+
+        recyclerView = view.findViewById(R.id.pizzaRecycler);
+        MeniItemAdapter meniItemAdapter = new MeniItemAdapter(data);
         recyclerView.setAdapter(meniItemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
     }

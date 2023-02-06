@@ -4,48 +4,254 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/_4sdp"
     android:background="#100F1F"
+    android:id="@+id/container"
     tools:context=".MainActivity">
 
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/categories"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/menu_item_layout">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Menu Categories"
+        android:fontFamily="sans-serif-black"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/white"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/coldDrinkCard"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories">
 
-        <com.google.android.material.tabs.TabItem
+        <ImageButton
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_37sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/colddrink" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_restaurant_menu_24" />
-
-        <com.google.android.material.tabs.TabItem
+            android:text="Cold Drinks"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_30sdp"/>
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_location_on_24" />
+            android:text="11 Item"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
 
-        <com.google.android.material.tabs.TabItem
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hotDrinkCard"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardMaxElevation="@dimen/_12sdp">
+
+        <ImageButton
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_33sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/coffeecup" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_home_24"/>
+            android:text="Hot Drinks"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_30sdp"/>
 
-        <com.google.android.material.tabs.TabItem
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_info_24" />
-        <com.google.android.material.tabs.TabItem
+            android:text="9 Item"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pastaCard"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coldDrinkCard">
+
+        <ImageButton
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_37sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/spaguetti" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_exit_to_app_24" />
+            android:text="Pasta"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
 
-    </com.google.android.material.tabs.TabLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13 Item"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pizzaCard"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hotDrinkCard"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardMaxElevation="@dimen/_12sdp">
+
+        <ImageButton
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_37sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pizzamain" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemsNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11 Item"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sandwichCard"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pastaCard">
+
+        <ImageButton
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_37sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/hamburgers" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sandwich"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_35sdp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8 Item"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sweetsCard"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaCard"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_margin="@dimen/_15sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardMaxElevation="@dimen/_12sdp">
+
+        <ImageButton
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_37sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/cakeslice" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sweets"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_45sdp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14 Item"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_50sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

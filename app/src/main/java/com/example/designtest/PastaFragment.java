@@ -54,8 +54,8 @@ public class PastaFragment extends Fragment {
         data.add(new MenuItemData(R.drawable.pasta4, "Lasagna Pasta", "60"));
         data.add(new MenuItemData(R.drawable.pasta5, "Negresco Pasta","60"));
 
-
         recyclerView = view.findViewById(R.id.pastaRecycler);
+        MeniItemAdapter meniItemAdapter = new MeniItemAdapter(data);
         recyclerView.setAdapter(meniItemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
     }

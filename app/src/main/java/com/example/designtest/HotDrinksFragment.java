@@ -47,15 +47,20 @@ public class HotDrinksFragment extends Fragment {
 
     private void setUpRecyclerView(View view) {
 
-        data.add(new MenuItemData(R.drawable.alferedo, "Alfredo ", "50"));
-        data.add(new MenuItemData(R.drawable.pasta1, "Tagliolini", "70"));
-        data.add(new MenuItemData(R.drawable.pasta2, "Spaghetii", "60"));
-        data.add(new MenuItemData(R.drawable.pasta3, "Chicken Pasta", "55"));
-        data.add(new MenuItemData(R.drawable.pasta4, "Lasagna Pasta", "60"));
-        data.add(new MenuItemData(R.drawable.pasta5, "Negresco Pasta","60"));
+        data.add(new MenuItemData(R.drawable.hot1, "Turkish Coffee", "25"));
+        data.add(new MenuItemData(R.drawable.hot2, "Frensh Coffee", "35"));
+        data.add(new MenuItemData(R.drawable.hot3, "Cappichino", "40"));
+        data.add(new MenuItemData(R.drawable.hot4, "Tea with milk", "35"));
+        data.add(new MenuItemData(R.drawable.hot5, "Green tea", "30"));
+        data.add(new MenuItemData(R.drawable.hot6, "Nescafe","40"));
+        data.add(new MenuItemData(R.drawable.hot7, "Latte", "45"));
+        data.add(new MenuItemData(R.drawable.hot8, "Mocha", "45"));
+        data.add(new MenuItemData(R.drawable.hot9, "Americano","50"));
+        data.add(new MenuItemData(R.drawable.hot10, "Tea","25"));
 
 
         recyclerView = view.findViewById(R.id.hotDrinkRecycler);
+        MeniItemAdapter meniItemAdapter = new MeniItemAdapter(data);
         recyclerView.setAdapter(meniItemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
     }
