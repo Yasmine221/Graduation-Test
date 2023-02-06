@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HotDrinksFragment">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/hotDrinkBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hotdrink" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hotDrinkItemCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        android:layout_marginTop="@dimen/_162sdp"
+        app:cardCornerRadius="@dimen/_20sdp">
+
+        <EditText
+            android:id="@+id/searchItems"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/search_item_background"
+            android:hint="Search your drink"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hotDrinkRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_70sdp"
+            tools:listitem="@layout/object_menu_item_layout"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
